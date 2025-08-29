@@ -6,6 +6,5 @@
         const { data, error } = await supabase
             .from('signin')
             .insert([
-                { username: 'someValue', password: 'someValue',useragent: 'dunno', ip : '196.168.hellnaw' },
+                { username: 'someValue', password: 'someValue',time: Date.now(), useragent: 'dunno', ip : '196.168.hellnaw' },
             ])
-            .select()
