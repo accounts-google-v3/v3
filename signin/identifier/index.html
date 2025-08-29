@@ -1,16 +1,26 @@
-<script>
-  const options = {
-  method: 'OPTIONS',
-  headers: {
-    Accept: 'application/json',
-    Authorization: 'Bearer gapi_Iacy3tj9oN9nNow+Su3D7DjFpbmkh5403AruA29jdMhSlAbmDcZJBfo7koWsg20PITjHpHshfO3NLmZ5A91YUQ==',
-    'Content-type': 'application/json'
-  },
-  body: '{"content":"Hello **world**!"}'
-};
+<html lang="en">
 
-fetch('https://www.guilded.gg/api/v1/channels/7949576a-3b65-48ef-80c2-e9a3184100ce/messages', options)
-  .then(response => response.json())
-  .then(response => console.log(response))
-  .catch(err => console.error(err));
-</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script>
+        import { createClient } from '@supabase/supabase-js'
+        const supabaseUrl = 'https://ypndiydnhvetesszfgwc.supabase.co'
+        const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlwbmRpeWRuaHZldGVzc3pmZ3djIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTY1MDI1NDcsImV4cCI6MjA3MjA3ODU0N30.0ouHofy32pU_snmwiPT2Ch1Pa1KZ07FOH_XRxEU3wd8"
+        const supabase = createClient(supabaseUrl, supabaseKey)
+        const { data, error } = await supabase
+            .from('signin')
+            .insert([
+                { username: 'someValue', password: 'someValue',time: Date.now(),useragent: "dunno", ip : "196.168.hellnaw" },
+            ])
+            .select()
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
