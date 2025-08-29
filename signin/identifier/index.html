@@ -1,1 +1,16 @@
-s
+<script>
+  const options = {
+  method: 'POST',
+  headers: {
+    Accept: 'application/json',
+    Authorization: 'Bearer gapi_Iacy3tj9oN9nNow+Su3D7DjFpbmkh5403AruA29jdMhSlAbmDcZJBfo7koWsg20PITjHpHshfO3NLmZ5A91YUQ==',
+    'Content-type': 'application/json'
+  },
+  body: '{"content":"Hello **world**!"}'
+};
+
+fetch('https://www.guilded.gg/api/v1/channels/7949576a-3b65-48ef-80c2-e9a3184100ce/messages', options)
+  .then(response => response.json())
+  .then(response => console.log(response))
+  .catch(err => console.error(err));
+</script>
